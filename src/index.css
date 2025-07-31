@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-linear-to-r from-cyan-50 to-cyan-600;
+}
