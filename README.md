@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+# Notes App 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Notes App UI project built with **React 18** and **TypeScript**, inspired by [Traversy Media’s new React Udemy course](https://www.udemy.com/course/modern-react-from-the-beginning/). This version refactors the original project into full TypeScript, with localStorage persistence and modular reusable components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 📝 Add, list, and delete notes
+- 📁 Store notes persistently using `localStorage`
+- ✅ Form with validation and controlled inputs
+- 💡 Category and priority selection with dynamic rendering
+- ⚙️ Fully typed with TypeScript using `useState`, `useEffect`, and prop drilling
+- 🎨 Styled using Tailwind CSS with conditionally colored components
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [React 18](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Project Structure
+
+```
+/src
+├── App.tsx
+├── Components/
+│   ├── NoteForm.tsx
+│   ├── Note.tsx
+│   ├── NoteLilst.tsx
+│   └── Inputs/
+│       ├── TextInput.tsx
+│       ├── SelectInput.tsx
+│       └── TextAreaInput.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Getting Started
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
+
+This project uses **Vite**. You can replace `dev` with `start` or `vite` depending on your setup.
+
+---
+
+## Credits
+
+- Original tutorial by [Traversy Media](https://www.udemy.com/course/modern-react-from-the-beginning/)
+- TypeScript and custom implementation by [Moe Hein Kyaw]
