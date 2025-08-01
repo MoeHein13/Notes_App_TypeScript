@@ -4,19 +4,17 @@ import SelectInput from "./Inputs/SelectInput";
 import TextAreaInput from "./Inputs/TextAreaInput";
 
 export type formDataType = {
-  // id: number;
+  id?: number;
   title: string;
   priority: string;
   category: string;
   description: string;
 };
 
-export type newNote = formDataType & { id: number };
-
 type props = {
-  notes: newNote[];
+  notes: formDataType[];
 
-  setNote: React.Dispatch<React.SetStateAction<newNote[]>>;
+  setNote: React.Dispatch<React.SetStateAction<formDataType[]>>;
 };
 
 const NoteForm = ({ notes, setNote }: props) => {

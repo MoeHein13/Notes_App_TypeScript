@@ -1,9 +1,10 @@
-import type { newNote } from "./NoteForm";
+import type { formDataType } from "./NoteForm";
 
 type NoteListProps = {
-  note: newNote;
+  note: formDataType;
   delNote: (id: number) => void;
 };
+
 const Note = ({ note, delNote }: NoteListProps) => {
   return (
     <div
@@ -30,7 +31,9 @@ const Note = ({ note, delNote }: NoteListProps) => {
       </div>
 
       <button
-        onClick={() => delNote(note.id)}
+        onClick={() => {
+          if (note.id !== undefined) delNote(note.id);
+        }}
         className="p-2 mx-3 cursor-pointer text-2xl"
       >
         🗑️

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import NoteForm from "./Components/NoteForm";
-import type { newNote } from "./Components/NoteForm";
+import type { formDataType } from "./Components/NoteForm";
 import NoteLilst from "./Components/NoteLilst";
 
 const App = () => {
-  const [notes, setNote] = useState<newNote[]>(() => {
+  const [notes, setNote] = useState<formDataType[]>(() => {
     const stored = localStorage.getItem("notes");
 
     return stored ? JSON.parse(stored) : [];

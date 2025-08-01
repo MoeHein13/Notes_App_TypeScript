@@ -1,8 +1,8 @@
 import Note from "./Note";
-import type { newNote } from "./NoteForm";
+import type { formDataType } from "./NoteForm";
 
 type NoteListProps = {
-  notes: newNote[];
+  notes: formDataType[];
   delNote: (id: number) => void;
 };
 
