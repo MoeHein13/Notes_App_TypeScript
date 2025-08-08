@@ -84,7 +84,7 @@ const NoteForm = ({ notes, setNote }: props) => {
             onChange={handleChange}
             options={[
               { value: "High", label: "High 🔴 " },
-              { value: "Medium", label: "Medium 🟡" },
+              { value: "Medium", label: "Medium 🔵" },
               { value: "Low", label: "Low 🟢" },
             ]}
           />

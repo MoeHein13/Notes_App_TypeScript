@@ -13,7 +13,7 @@ const Note = ({ note, delNote }: NoteListProps) => {
           note.priority === "High"
             ? "border-l-red-500"
             : note.priority === "Medium"
-            ? "border-l-yellow-500"
+            ? "border-l-blue-500"
             : "border-l-green-500"
         }`}
     >
