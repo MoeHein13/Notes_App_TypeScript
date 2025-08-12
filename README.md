@@ -43,11 +43,29 @@ A simple Notes App UI project built with **React 18** and **TypeScript**, inspir
 ## Getting Started
 
 ```bash
+# Clone the repository
+git clone <your-repo-url>
+
+# Navigate into the project folder
+cd <project-folder>
+
+# Install dependencies
 npm install
+
+# Start the development server
 npm run dev
 ```
 
 This project uses **Vite**. You can replace `dev` with `start` or `vite` depending on your setup.
+
+---
+
+## Differences from the Original Version
+
+- Migrated all components to **TypeScript (TSX)**.
+- Added type definitions for note data and component props.
+- Improved error handling and input validation.
+- Enhanced responsive design for better mobile usability.
 
 ---
 
