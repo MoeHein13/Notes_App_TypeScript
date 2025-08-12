@@ -17,7 +17,7 @@ A simple Notes App UI project built with **React 18** and **TypeScript**, inspir
 
 ## Live Demo 
 
--[https://MoeHein13.github.io/Notes_App_TypeScript/](https://MoeHein13.github.io/Notes_App_TypeScript/)
+- [https://MoeHein13.github.io/Notes_App_TypeScript/](https://MoeHein13.github.io/Notes_App_TypeScript/)
 
 
 
